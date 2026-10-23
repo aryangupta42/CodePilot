@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-canvas: #0B0D12;
+    --bg-panel: #11151E;
+    --bg-card: #171D29;
+    --bg-card-hover: #1D2534;
+    --border-color: #232B3E;
+    --border-hover: #333E56;
+    --accent-violet: #6C63FF;
+    --accent-cyan: #25D9F2;
+  }
+
+  * {
+    border-color: #232B3E;
+  }
+
+  body {
+    background-color: #0B0D12;
+    color: #F8FAFC;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom sleek scrollbar for developer tools */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0D12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #232B3E;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3B4B68;
+}
+
+/* Terminal & Code styling helpers */
+.code-font {
+  font-family: 'JetBrains Mono', Menlo, Monaco, Consolas, monospace;
+}
+
+/* Subtle Card Top-Edge Highlight for realistic Linear-like depth */
+.card-highlight {
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.07);
+}
+
+.card-highlight-violet {
+  box-shadow: inset 0 1px 0 0 rgba(108, 99, 255, 0.35);
+}
+
+.card-highlight-cyan {
+  box-shadow: inset 0 1px 0 0 rgba(37, 217, 242, 0.35);
+}
+
+/* Smooth subtle glow */
+.subtle-violet-glow {
+  box-shadow: 0 0 20px -3px rgba(108, 99, 255, 0.25);
+}
+
+.subtle-cyan-glow {
+  box-shadow: 0 0 20px -3px rgba(37, 217, 242, 0.25);
+}
+
+/* Shimmer & Glow effects */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.03);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Diff styling */
+.diff-added {
+  background-color: rgba(16, 185, 129, 0.12);
+  border-left: 3px solid #10B981;
+  color: #A7F3D0;
+}
+
+.diff-removed {
+  background-color: rgba(244, 63, 94, 0.12);
+  border-left: 3px solid #F43F5E;
+  color: #FECDD3;
+}
+
+.diff-context {
+  color: #94A3B8;
+}
